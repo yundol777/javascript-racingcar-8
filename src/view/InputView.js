@@ -12,3 +12,5 @@ export async function readCarNames() {
 
   return carNames;
 }
+
+export function readTryCount() {}
