@@ -1,6 +1,8 @@
 import { Console } from "@woowacourse/mission-utils";
 import parseCarNames from "../utils/parseCarNames.js";
 import validateCarNames from "../utils/validateCarNames.js";
+import parseTryCount from "../utils/parseTryCount.js";
+import validateTryCount from "../utils/validateTryCount.js";
 
 export async function readCarNames() {
   const carNamesInput = await Console.readLineAsync(
@@ -13,4 +15,13 @@ export async function readCarNames() {
   return carNames;
 }
 
-export function readTryCount() {}
+export async function readTryCount() {
+  const tryCountInput = await Console.readLineAsync(
+    "시도할 횟수는 몇 회인가요?\n"
+  );
+
+  const tryCount = parseTryCount(tryCountInput);
+  validateTryCount(tryCount);
+
+  return tryCount;
+}
