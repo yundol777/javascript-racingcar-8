@@ -3,6 +3,7 @@ import parseCarNames from "../utils/parseCarNames.js";
 import validateCarNames from "../utils/validateCarNames.js";
 import parseTryCount from "../utils/parseTryCount.js";
 import validateTryCount from "../utils/validateTryCount.js";
+import validateDuplicateNames from "../utils/validateDuplicateNames.js";
 
 export async function readCarNames() {
   const carNamesInput = await Console.readLineAsync(
@@ -11,6 +12,7 @@ export async function readCarNames() {
 
   const carNames = parseCarNames(carNamesInput);
   validateCarNames(carNames);
+  validateDuplicateNames(carNames);
 
   return carNames;
 }
