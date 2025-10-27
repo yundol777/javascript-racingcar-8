@@ -1,4 +1,3 @@
-import validateDuplicateNames from "../utils/validateDuplicateNames.js";
 import Car from "./Car.js";
 
 class RacingGame {
