@@ -1,6 +1,10 @@
 import { readCarNames, readTryCount } from "./view/InputView.js";
 import RacingGame from "./model/RacingGame.js";
-import { printRoundResult, printStartMessage } from "./view/OutputView.js";
+import {
+  printRoundResult,
+  printStartMessage,
+  printWinners,
+} from "./view/OutputView.js";
 
 class App {
   async run() {
@@ -13,6 +17,8 @@ class App {
     for (let index = 0; index < tryCount; index++) {
       printRoundResult(racingGame.playRound());
     }
+
+    printWinners(racingGame.getWinners());
   }
 }
 

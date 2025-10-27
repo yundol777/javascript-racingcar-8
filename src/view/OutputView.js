@@ -11,3 +11,7 @@ export function printRoundResult(roundResult) {
 
   Console.print("");
 }
+
+export function printWinners(winners) {
+  Console.print(`최종 우승자 : ${winners.join(", ")}`);
+}
