@@ -1,7 +1,9 @@
+import validateDuplicateNames from "../utils/validateDuplicateNames.js";
 import Car from "./Car.js";
 
 class RacingGame {
   constructor(carNames) {
+    validateDuplicateNames(carNames);
     this.cars = carNames.map((name) => new Car(name));
   }
 
