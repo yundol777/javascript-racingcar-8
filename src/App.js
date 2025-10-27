@@ -1,5 +1,6 @@
 import { Console } from "@woowacourse/mission-utils";
 import { readCarNames, readTryCount } from "./view/InputView.js";
+import RacingGame from "./model/RacingGame.js";
 
 class App {
   async run() {
@@ -8,6 +9,8 @@ class App {
 
     const tryCount = await readTryCount();
     Console.print(tryCount);
+
+    const racingGame = new RacingGame(carNames);
   }
 }
 
