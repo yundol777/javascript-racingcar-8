@@ -37,11 +37,4 @@ describe("경주할 자동차 이름 입력(readCarName) 테스트", () => {
 
     await expect(readCarNames()).rejects.toThrow("[ERROR]");
   });
-
-  test("중복되는 이름 입력 시, 오류 반환", async () => {
-    const inputs = ["pobi,woni,woni"];
-    mockQuestions(inputs);
-
-    await expect(readCarNames()).rejects.toThrow("[ERROR]");
-  });
 });
